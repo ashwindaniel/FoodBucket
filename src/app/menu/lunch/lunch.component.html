@@ -12,8 +12,8 @@
     <tr *ngFor="let food of tableData">
       <td>{{food.name}}</td>
       <td>{{food.Description}}</td>
-      <td>{{food.Price}}</td>
-      <td><button (click)="addCart(food)">Add</button></td>
+      <td><i class="fa fa-inr" aria-hidden="true"></i> {{food.Price}}</td>
+      <td><button (click)="addCart(food)"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add</button></td>
     </tr>
 
   </tbody>
