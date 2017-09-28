@@ -12,13 +12,13 @@ export class HelpComponent implements OnInit {
 
   ngOnInit() {
   }
-  posting() {
-    console.log('posting');
-    this.obj = {
-      'name': 'Rava',
-      'Description': 'Breakfast Rava Description',
-      'Price': 45
-    };
-    this.dataService.sendPost('breakfast', this.obj);
-  }
+  // posting() {
+  //   console.log('posting');
+  //   this.obj = {
+  //     'name': 'Rava',
+  //     'Description': 'Breakfast Rava Description',
+  //     'Price': 45
+  //   };
+  //   this.dataService.sendPost('breakfast', this.obj);
+  // }
 }
