@@ -1,0 +1,19 @@
+<table class="table" style="opacity: 1;">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Add To Cart</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let food of tableData">
+      <td>{{food.name}}</td>
+      <td>{{food.Description}}</td>
+      <td>{{food.Price}}</td>
+      <td><button (click)="addCart(food)">Add</button></td>
+    </tr>
+
+  </tbody>
+</table>

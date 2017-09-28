@@ -1,0 +1,17 @@
+<table class="table" style="opacity: 1;">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let food of cart">
+      <td>{{food.name}}</td>
+      <td>{{food.Description}}</td>
+      <td>{{food.Price}}</td>
+    </tr>
+
+  </tbody>
+</table>
