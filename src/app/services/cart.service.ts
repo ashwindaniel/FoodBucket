@@ -4,13 +4,12 @@ import { TableData } from '../interface/table-data';
 @Injectable()
 export class CartService {
   cartData: TableData[] = [];
-
-  constructor() {
-    console.log('inside cart');
-  }
+  cartCount = 0;
+  constructor() { }
 
   onUpdate(incoming: TableData) {
     this.cartData.push(incoming);
+    this.cartCount = this.cartData.length;
   }
   getCart() {
     return this.cartData;

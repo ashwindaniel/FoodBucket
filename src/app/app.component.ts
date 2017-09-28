@@ -11,12 +11,11 @@ import { CartService } from './services/cart.service';
 
 export class AppComponent implements OnInit {
   title = 'Food Bucket';
-  cartCount = 0;
+  cartBadge = 0;
   public cart: TableData[];
-  constructor(private cartService: CartService) { }
+  constructor(public cartService: CartService) { }
 
   ngOnInit() {
     this.cart = this.cartService.getCart();
-    this.cartCount = CartService.length;
   }
 }

@@ -5,6 +5,7 @@
       <th>Item</th>
       <th>Description</th>
       <th>Price</th>
+      <th>Remove</th>
     </tr>
   </thead>
   <tbody>
@@ -12,7 +13,12 @@
       <td>{{food.name}}</td>
       <td>{{food.Description}}</td>
       <td><i class="fa fa-inr" aria-hidden="true"></i> {{food.Price}}</td>
+      <td><button (click)="remove(food)"><i class="fa fa-minus-circle" aria-hidden="true"></i> remove</button></td>
     </tr>
-
   </tbody>
+  <tfoot>
+    <td colspan="2"></td>
+    <td colspan="2" style="border: 10px;text-align: left;">Total: <i class="fa fa-inr" aria-hidden="true"></i> {{sum}}</td>
+  </tfoot>
 </table>
+<Button class="btn btn-success" (click)="pay()">Proceed to Pay</Button>

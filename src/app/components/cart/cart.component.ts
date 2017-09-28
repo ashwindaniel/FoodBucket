@@ -16,11 +16,21 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.cart = this.cartService.getCart();
-    // console.log(this.cart[0].Price);
-    // console.log(this.cart[0].Price);
-    // for (let i = 0; i < this.cart.length; ++i) {
-    //   this.sum += this.cart[i].Price;
-    // }
+    for (let i = 0; i < this.cart.length; ++i) {
+      this.sum += this.cart[i].Price;
+    }
+  }
+  remove(food: TableData) {
+    for (let i = 0; i < this.cart.length; ++i) {
+      if (this.cart[i] === food) {
+        this.sum -= this.cart[i].Price;
+        this.cart.splice(i, 1);
+        break;
+      }
+    }
+  }
+  pay() {
+    alert('Payment of Rs ' + this.sum + ' Recieved! Thank You.');
   }
 
 }
